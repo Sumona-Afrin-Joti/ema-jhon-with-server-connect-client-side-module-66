@@ -1,0 +1,19 @@
+.cart-item-container{
+    display: flex;
+}
+.cart-item-description{
+    width: 50%;
+}
+.delivery-option{
+    color: #090;
+    font-weight: 700;
+}
+.secondary-text{
+    color: #888;
+    font-weight: 400;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.shipping-options{
+    margin-right: 50px;
+}
