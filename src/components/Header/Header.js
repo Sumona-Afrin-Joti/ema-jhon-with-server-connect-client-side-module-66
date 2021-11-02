@@ -12,6 +12,7 @@ const Header = () => {
                 <NavLink to="/shop">Shop</NavLink>
                 <NavLink to="/reviews">Order Review</NavLink>
                 <NavLink to="/inventory">Manage Inventory Here</NavLink>
+                {user.email && <NavLink to="/myOrders" >My Orders</NavLink>}
                 {user.email && <span style={{color : 'white'}} >{user.displayName}</span> }
 
                 {

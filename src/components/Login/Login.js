@@ -5,7 +5,7 @@ import './Login.css';
 import { useLocation, useHistory } from 'react-router';
 
 const Login = () => {
-    const {signInUsingGoogle} = useAuth();
+    const {signInUsingGoogle,setIsLoading} = useAuth();
     const location = useLocation();
     console.log(" this is location",location)
     const history = useHistory();
@@ -16,6 +16,9 @@ const Login = () => {
         signInUsingGoogle()
         .then(result =>{
             history.push(redirect_uri);
+        })
+        .finally(()=>{
+            setIsLoading(false);
         })
     }
     return (
