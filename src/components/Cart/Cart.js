@@ -1,11 +1,9 @@
 import './Cart.css';
-
 import React from 'react';
-import { useHistory } from 'react-router';
+
 
 const Cart = (props) => {
     const { cart } = props;
-console.log(props)
 
     let totalQuantity = 0;
     let total = 0;
@@ -13,7 +11,6 @@ console.log(props)
         const productQuantity = !product.quantity ? 1 : product.quantity;
         totalQuantity = totalQuantity + productQuantity;
         total = total + (product.price * productQuantity);
-        console.log(typeof total)
     }
     // const totalReducer = (previous,current) => previous + current.price;
     // const total = cart.reduce(totalReducer,0);
